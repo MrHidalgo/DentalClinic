@@ -127,10 +127,10 @@ const initSwiper = () => {
     grabCursor: true,
     freeMode: false,
     effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
-    // autoplay: {
-    //   delay: 3500,
-    // },
-    speed: 750,
+    autoplay: {
+      delay: 3500,
+    },
+    speed: 550,
     slidesPerView: 1,
     spaceBetween: 0,
     pagination: {
