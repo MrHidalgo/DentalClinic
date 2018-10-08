@@ -2,6 +2,27 @@
 
 footer#footer.footer
   .c-grid
-    .footer__wrapper
+
+    .footer__block-wrapper
+      .footer__block.footer__block-0
+        p!= "Location"
+        p!= "TC 5/2458, First Floor, Mudra<br>Golf Links Road, Kowdiar 695003<br>Trivandrum"
+      .footer__block.footer__block-1
+        p!= "Clinic Hours"
+        p!= "Monday to Friday : 3.30 pm to 7.30 pm<br>Saturday : 9.30 am to 12.30 pm,<br>3.30 pm to 7.30 pm"
+      .footer__block.footer__block-2
+        p!= "Contact"
+        p
+          != "Phone : <a href='tel:0471 2432313'>0471 2432313</a>, <a href='tel:9945903313'>9945903313</a><br>Email : <a href='mailto:info@csdclinic.com'>info@csdclinic.com</a>"
+
+
+    .copyright
+      p!= "© 2018 Childrens Speciality Dental Clinic. All rights reserved."
+      a(
+        href="#"
+        title="" class=""
+      )!= "Site by Artemas"
+
+
 
 // FOOTER :: END

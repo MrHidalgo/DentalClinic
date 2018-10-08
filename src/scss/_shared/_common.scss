@@ -1,3 +1,16 @@
 // COMMON :: START
 
+// copyright
+.copyright {
+  display: block;
+  padding-top: 99px;
+  text-align: center;
+  color: $c-white;
+  font-size: 14px;
+  @include respond(max-small) {
+    padding-top: 60px;
+  }
+}
+// copyright :: end
+
 // COMMON :: END

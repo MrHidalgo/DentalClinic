@@ -1,5 +1,71 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  overflow: hidden;
+  position: relative;
+  padding-top: 64px;
+  padding-bottom: 225px;
+  background-color: $c-404c60;
+  background-image: url("../img/img-bg-footer@2x.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include respond(max-small) {
+    padding-bottom: 175px;
+  }
+  @include respond(max-small) {
+    padding-top: 50px;
+    padding-bottom: 125px;
+  }
+
+  &__block {
+    width: calc(100% / 3);
+    padding: 29px 15px 56px;
+    text-align: center;
+    color: $c-white;
+    @include respond(max-small) {
+      padding: 20px 15px 40px;
+    }
+    @include respond(max-small) {
+      width: 100%;
+    }
+
+    &-1 {
+      border-left: 1px solid $c-667080;
+      border-right: 1px solid $c-667080;
+      @include respond(max-small) {
+        border: none;
+        border-top: 1px solid $c-667080;
+        border-bottom: 1px solid $c-667080;
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include respond(max-extra-small) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    > p {
+      &:nth-child(1) {
+        padding-bottom: 29px;
+        font-size: 25px;
+        @include respond(max-small) {
+          padding-bottom: 15px;
+          font-size: 22px;
+        }
+      }
+
+      &:nth-child(2) {
+        @include respond(max-small) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
 
 // FOOTER :: END
