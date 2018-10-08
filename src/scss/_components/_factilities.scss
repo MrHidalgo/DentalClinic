@@ -1,0 +1,123 @@
+// FACTILITIES :: START
+
+.factilities {
+  overflow: hidden;
+  position: relative;
+  padding-top: 51px;
+  padding-bottom: 155px;
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(228,228,228,0.8) 45%,rgba(0,0,0,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#00000000',GradientType=0 );
+  }
+
+  &__title {
+    padding-bottom: 53px;
+  }
+
+  &__slider {
+    z-index: 1;
+    position: relative;
+
+    &-wrap {
+      display: flex;
+      height: 100%;
+      @include respond(max-small) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-left {
+      width: 514px;
+      padding: 92px 30px 0 47px;
+      background-color: $c-white;
+      @include respond(max-large) {
+        width: 425px;
+        padding: 45px 15px 0 30px;
+      }
+      @include respond(max-small) {
+        width: 100%;
+        padding: 45px 15px 45px 30px;
+      }
+
+      p {
+        padding-bottom: 47px;
+        color: $c-305571;
+        line-height: 1.2;
+        font-size: 28px;
+        font-weight: 600;
+        @include respond(max-small) {
+          font-size: 24px;
+        }
+      }
+
+      span {
+        display: block;
+        padding-bottom: 15px;
+        font-size: 17px;
+        @include respond(max-small) {
+          font-size: 15px;
+        }
+      }
+    }
+
+    &-right {
+      width: 100%;
+      padding: 10px;
+      max-width: calc(100% - 514px);
+      @include respond(max-large) {
+        max-width: calc(100% - 425px);
+      }
+      @include respond(max-small) {
+        max-width: 100%;
+      }
+
+      img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        @include respond(max-small) {
+          max-height: 100%;
+        }
+      }
+    }
+
+    .swiper-slide {
+      &-0 {
+        .factilities__slider-right {
+          background-color: #4bb588;
+        }
+      }
+      &-1 {
+        .factilities__slider-right {
+          background-color: #9fd9ee;
+        }
+      }
+      &-2 {
+        .factilities__slider-right {
+          background-color: #9ac272;
+        }
+      }
+      &-3 {
+        .factilities__slider-right {
+          background-color: #69b6c4;
+        }
+      }
+      &-4 {
+        .factilities__slider-right {
+          background-color: #bf94c4;
+        }
+      }
+    }
+  }
+}
+
+// FACTILITIES :: END

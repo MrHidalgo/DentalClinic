@@ -3,12 +3,46 @@
   max-width: 500px;
   height: 300px;
 
-  &--contacts {
-    position: absolute;
-    top: 0;
-    left: 0;
+  &--factilities {
     max-width: 100%;
-    height: 100%;
+    min-height: 655px;
+    @include respond(max-small) {
+      height: auto;
+      padding-top: 37px;
+    }
+
+    .swiper-wrapper {
+      height: calc(100% - 33px);
+      @include respond(max-small) {
+        height: auto;
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 0;
+      @include respond(max-small) {
+        top: 0;
+        bottom: auto;
+      }
+
+      &-bullet {
+        opacity: 1;
+        width: 67px;
+        height: 7px;
+        border-radius: 0;
+        background-color: $c-bebebd;
+        @include transition(background-color);
+        @include respond(max-small) {
+          width: 33px;
+        }
+
+        &:hover,
+        &-active {
+          background-color: $c-38739c;
+          @include transition(background-color);
+        }
+      }
+    }
   }
 
   &--testimonials {
@@ -53,5 +87,13 @@
         }
       }
     }
+  }
+
+  &--contacts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: 100%;
   }
 }

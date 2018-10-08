@@ -118,4 +118,24 @@ const initSwiper = () => {
     slidesPerView: 1,
     spaceBetween: 0
   });
+
+  const mySwiperFactilities = new Swiper('.swiper-container.swiper-container--factilities', {
+    // Optional parameters
+    loop: true,
+    watchOverflow: true,
+    normalizeSlideIndex: true,
+    grabCursor: true,
+    freeMode: false,
+    effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
+    // autoplay: {
+    //   delay: 3500,
+    // },
+    speed: 750,
+    slidesPerView: 1,
+    spaceBetween: 0,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 };

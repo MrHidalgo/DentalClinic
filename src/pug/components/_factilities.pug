@@ -1,0 +1,61 @@
+// FACTILITIES :: START
+
+-
+  var textArr0 = [
+    "Age appropriate home oral hygiene measures including oral hygiene aids, tooth pastes, and methods of maintaining oral hygiene",
+    "Diet planning to prevent tooth decay",
+    "Tooth eruption, problems during tooth eruption",
+    "Oral habits including thumb sucking, mouth breathing"
+  ]
+  var textArr1 = [
+    "Prevention of tooth decay with scientifically proven techniques as caries risk assessment, diet counselling, use of topical fluorides, use of pit and fissure sealents, reinforcement of home care",
+    "Prevention of malocclusion : early recognition and corrrection of developing malocclusion, prevention of early loss of milk teeth, prevention and interception of oral habits, use of space maintainers, orthopedic and myofunctional appliances.",
+    "Prevention of gum diseases:good oral hygiene, prevention of harmful oral habits"
+  ];
+  var textArr2 = [
+    "1. Restoration of teeth- aesthetic restorations, crowns",
+    "2. Pediatric endodontics: pulpotomy, pulpectomy, apexogenesis, apexification maturogenesis",
+    "3. Preventive orthodontics: space maintainers correction of oral habits",
+    "4. Interceptive orthodontics: growth modification using myofunctional and orthopedic appliances",
+    "5. Corrective orthodontics: fixed appliance therapy",
+    "6. Minor oral surgical procedures including tooth extraction",
+  ];
+  var textArr3 = [
+    "Trauma to the teeth is quiet common in children. It can occur at home, school, playground or on the road. It can lead to fracture of the tooth, tooth displacement , loss of the tooth, soft tissue injuries, or in severe cases jaw fractures.",
+    "Management of Tooth fractures, tooth displacements, tooth avulsion injuries",
+  ];
+  var textArr4 = [
+    "Dental treatment of children with special needs or medically compromising conditions may have to be carried out in a hospital setting and may require treatment under general anesthesia."
+  ];
+
+
+mixin swiperSlideContent(classMod, imgName, title, textArr)
+  .swiper-slide(class!= "swiper-slide-" + classMod)
+    .factilities__slider-wrap
+      .factilities__slider-left
+        p!= title
+        each val, idx in textArr
+          span!= textArr[idx]
+
+      .factilities__slider-right
+        +pictureTag(false, "", "object-fit--containCenter", "png", imgName)
+
+mixin swiperFactilitiesContent()
+  +swiperSlideContent("0", "img-slider-fac-0", "ORAL HEALTH EDUCATION AND MOTIVATION", textArr0)
+  +swiperSlideContent("1", "img-slider-fac-1", "PREVENTION OF ORAL DISEASES", textArr1)
+  +swiperSlideContent("2", "img-slider-fac-2", "TREATMENT PROCEDURES", textArr2)
+  +swiperSlideContent("3", "img-slider-fac-3", "DENTAL EMERGENCIES", textArr3)
+  +swiperSlideContent("4", "img-slider-fac-4", "DENTAL CARE FOR CHILDREN WITH SPECIAL NEEDS", textArr4)
+
+
+section#factilities.factilities
+  .factilities__bg
+  
+  .c-grid
+    h1.factilities__title.title!= "Factilities"
+
+    .factilities__slider
+
+      +swiper('swiper-container--factilities', 'swiperFactilitiesContent', true, false, false)
+
+// FACTILITIES :: END
