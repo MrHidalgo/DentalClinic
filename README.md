@@ -32,7 +32,6 @@ Task name | Description
 - Normalize-css;
 - css-hamburgers;
 - bower-webfontloader;
-- svg4everybody;
 
 
 ## Bower package style

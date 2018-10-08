@@ -28,7 +28,6 @@ $(document).ready((ev) => {
     // default
     initWebFontLoader();
     initPreventBehavior();
-    initSvg4everybody();
     // lib
     // callback
   };
