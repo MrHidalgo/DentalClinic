@@ -1,0 +1,52 @@
+// DOCTOR :: START
+
+mixin modalDoctorContent()
+  .modal__header
+  .modal__body
+    h3!= "Some title"
+    p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  .modal__footer
+
+mixin doctorBlock(classMod, imgClassMod, imgExt, imgName, doctorName, doctorPos, hrefVal)
+  .doctor__block(class!= "doctor__block-" + classMod)
+    .doctor__block-img
+      +pictureTag(false, "", imgClassMod, imgExt, imgName)
+
+    p.doctor__block-name!= doctorName
+    p.doctor__block-pos!= doctorPos
+    a.doctor__block-link(
+      href!= hrefVal
+      title="" class=""
+      popup-js
+      data-effect="mfp-zoom-in"
+    )!= "View  Bio"
+
+
+section#doctor.doctor
+  .c-grid
+    h1.doctor__title.title!= "Our Doctors"
+
+    .doctor__block-wrapper
+
+      +doctorBlock(
+        "0",
+        "object-fit-containCenter", "png", "img-doctor-0",
+        "Dr. Varghese Chacko", "Pedodontics & Preventive Dentistry<br>B.D.S, M.D.S",
+        "#modalBio"
+      )
+      +doctorBlock(
+        "1",
+        "object-fit-containCenter", "png", "img-doctor-1",
+        "Dr. Suvy Manuel", "Oral & Maxillofacial Surgeon<br>BDS, MDS, DNB, MNAMS, MFDS RCS Eng, MOS RCS Ed, FDS RCS Ed",
+        "#modalBio"
+      )
+      +doctorBlock(
+        "2",
+        "object-fit-containCenter", "png", "img-doctor-2",
+        "Dr.Deepu Leander", "Orthodontics & Dentofacial Orthopedics<br>B.D.S, M.D.S",
+        "#modalBio"
+      )
+
+  +modal('modalBio', 'modalDoctorContent')
+
+// DOCTOR :: END

@@ -1,0 +1,83 @@
+// DOCTOR :: START
+
+.doctor {
+  background-color: $c-f8f8f8;
+  padding-bottom: 90px;
+
+  &__title {
+    padding-bottom: 29px;
+  }
+
+  &__block {
+    width: calc(100% / 3);
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    @include respond(max-small) {
+      width: 100%;
+      padding-bottom: 35px;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      margin-left: 0;
+      @include respond(max-small) {
+        .doctor__block-img {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .doctor__block-img {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &:nth-child(3) {
+      margin-right: 0;
+
+      .doctor__block-img {
+        margin-left: auto;
+        @include respond(max-small) {
+          margin-right: auto;
+        }
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      justify-content: space-between;
+      @include respond(max-small) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-img {
+      width: 100%;
+      max-width: 321px;
+      margin-bottom: 15px;
+    }
+
+    &-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &-pos {
+      padding-bottom: 10px;
+    }
+
+    &-link {
+      color: $c-436885;
+      text-decoration: underline;
+      font-size: 15px;
+      font-family: 'Armata', 'Montserrat', sans-serif;
+    }
+  }
+}
+
+// DOCTOR :: END

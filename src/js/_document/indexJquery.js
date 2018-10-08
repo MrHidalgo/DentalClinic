@@ -30,6 +30,7 @@ $(document).ready((ev) => {
     initPreventBehavior();
     // lib
     initSwiper();
+    initPopups();
     // callback
   };
   initJquery();

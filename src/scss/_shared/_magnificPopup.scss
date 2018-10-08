@@ -2,10 +2,23 @@
   position: relative;
   width: 100%;
   //max-width: 500px;
-  //min-height: 200px;
+  min-height: 200px;
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
+
+  &#modalBio {
+    max-width: 600px;
+    padding: 40px;
+
+    h3 {
+      padding-bottom: 15px;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+  }
 }
 
 
