@@ -6,6 +6,14 @@
   padding-top: 51px;
   padding-bottom: 155px;
 
+  > img {
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
   &__bg {
     z-index: 0;
     position: absolute;
@@ -21,7 +29,7 @@
   }
 
   &__slider {
-    z-index: 1;
+    z-index: 2;
     position: relative;
 
     &-wrap {
