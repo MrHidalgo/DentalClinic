@@ -19,6 +19,17 @@ $(document).ready((ev) => {
    * =============================================
    */
 
+  /**
+   *
+   */
+  const initMoreMainBtn = () => {
+    $(".main__text-more").on('click', (ev) => {
+      const parentElem = $(ev.currentTarget).closest(".main__text-wrapper");
+
+      parentElem.find(".main__text-hide").slideToggle(450);
+    });
+  };
+
 
 
   /**
@@ -32,6 +43,7 @@ $(document).ready((ev) => {
     initSwiper();
     initPopups();
     // callback
+    initMoreMainBtn();
   };
   initJquery();
 });

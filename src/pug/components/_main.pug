@@ -1,0 +1,42 @@
+// MAIN :: START
+
+section#main.main
+  .main__bg
+    img(
+      srcset="./img/img-bg-main.png, ./img/img-bg-main@2x.png 2x" 
+      alt="" title=""
+     )
+
+  img.main__corner(
+    srcset="./img/img-corner-main.png, ./img/img-corner-main@2x.png 2x"
+    alt="" title=""
+   )
+
+  .c-grid
+
+    h1.main__title!= "Providing quality and evidence based <br>treatment for children of all age groups"
+
+    #main__img-wrapper.main__img-wrapper
+      img.main__img(
+        data-depth="0.2"
+        srcset="./img/img-ppl-main-0.png, ./img/img-ppl-main-0@2x.png 2x"
+        alt="" title=""
+       )
+      img.main__img(
+        data-depth="0.4"
+        srcset="./img/img-ppl-main-1.png, ./img/img-ppl-main-1@2x.png 2x"
+        alt="" title=""
+       )
+
+    .main__text-wrapper
+      p.main__text!= "Located at Golf Links Road, Kowdiar it is one of the few clinics in the city providing treatment exclusively for children. Believing in the philosophy, “Starting Early Makes a difference”, the clinic aims to meet the dental and oral health needs of children right from infancy through childhood and adolescence."
+      .main__text-hide
+        p.main__text!= "Located at Golf Links Road, Kowdiar it is one of the few clinics in the city providing treatment exclusively for children. Believing in the philosophy, “Starting Early Makes a difference”, the clinic aims to meet the dental and oral health needs of children right from infancy through childhood and adolescence."
+        p.main__text!= "Located at Golf Links Road, Kowdiar it is one of the few clinics in the city providing treatment exclusively for children. Believing in the philosophy, “Starting Early Makes a difference”, the clinic aims to meet the dental and oral health needs of children right from infancy through childhood and adolescence."
+
+      a.main__text-more(
+        href="#"
+        title="" class=""
+      )!= "Read more"
+
+// MAIN :: END
