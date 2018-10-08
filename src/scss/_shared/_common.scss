@@ -10,6 +10,15 @@
   @include respond(max-small) {
     padding-top: 60px;
   }
+
+  a {
+    @include transition(color);
+
+    &:hover {
+      color: $c-dc9a1b;
+      @include transition(color);
+    }
+  }
 }
 // copyright :: end
 

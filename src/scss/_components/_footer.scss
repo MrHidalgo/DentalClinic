@@ -64,6 +64,15 @@
           font-size: 14px;
         }
       }
+
+       a {
+         @include transition(color);
+
+         &:hover {
+           color: $c-dc9a1b;
+           @include transition(color);
+         }
+       }
     }
   }
 }
