@@ -1,5 +1,20 @@
 // COMMON :: START
 
+// title
+.title {
+  color: $c-333;
+  text-align: center;
+  font-size: 45px;
+  font-weight: normal;
+  @include respond(max-large) {
+    font-size: 40px;
+  }
+  @include respond(max-small) {
+    font-size: 35px;
+  }
+}
+// title :: end
+
 // copyright
 .copyright {
   display: block;

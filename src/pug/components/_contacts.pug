@@ -1,24 +1,22 @@
 // CONTACTS :: START
 
+
+mixin swiperContactsContent()
+  .swiper-slide
+    +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+  .swiper-slide
+    +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+  .swiper-slide
+    +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+  .swiper-slide
+    +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+
+
 section#contacts.contacts
   .c-grid
     .contacts__wrapper
       .contacts__wrapper-left
         .contacts__slider
-          mixin swiperContactsContent()
-            .swiper-slide
-              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
-
-            .swiper-slide
-              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
-
-            .swiper-slide
-              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
-
-            .swiper-slide
-              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
-
-
           +swiper('swiper-container--contacts', 'swiperContactsContent', false, false, false)
 
       .contacts__wrapper-right

@@ -1,0 +1,32 @@
+// TESTIMONIALS :: START
+
+
+mixin swiperTestimonialsContent()
+  .swiper-slide
+    p!= "Highly ethical, proficient, and efficient. I am so grateful I found them through a friend who works in the dental field. Varghese was spoken highly about by numerous independent sources"
+    p!= "Benjamin David"
+  .swiper-slide
+    p!= "Highly ethical, proficient, and efficient. I am so grateful I found them through a friend who works in the dental field."
+    p!= "Benjamin David"
+  .swiper-slide
+    p!= "Highly ethical, proficient, and efficient."
+    p!= "Benjamin David"
+
+
+section#testimonials.testimonials
+  .c-grid
+
+    h1.testimonials__title.title!= "Testimonials"
+
+    .testimonials__wrapper
+      img(
+        srcset="./img/img-bg-testimonials.png, ./img/img-bg-testimonials@2x.png 2x"
+        alt="" title=""
+       )
+
+      .testimonials__text
+        +swiper('swiper-container--testimonials', 'swiperTestimonialsContent', false, false, false)
+
+
+
+// TESTIMONIALS :: END
