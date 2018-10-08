@@ -22,4 +22,66 @@
 }
 // copyright :: end
 
+
+// form
+.form {
+  &__field {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 25px;
+
+    &--btn {
+      margin-bottom: 0;
+    }
+  }
+
+  &__input {
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 1px solid $c-333;
+    background-color: transparent;
+    padding: 0 15px;
+    @include transition(box-shadow);
+    @include inputPlaceholder {
+      color: $c-333;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 1px 0 0 rgba($c-333, 0.15);
+      @include transition(box-shadow);
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 97px;
+    height: 38px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 2em;
+    background-color: $c-dc9a1b;
+    color: $c-white;
+    font-weight: 600;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: $c-38739c;
+      @include transition(background-color);
+    }
+  }
+}
+// form :: end
+
 // COMMON :: END

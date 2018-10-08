@@ -1,0 +1,43 @@
+// CONTACTS :: START
+
+section#contacts.contacts
+  .c-grid
+    .contacts__wrapper
+      .contacts__wrapper-left
+        .contacts__slider
+          mixin swiperContactsContent()
+            .swiper-slide
+              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+
+            .swiper-slide
+              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+
+            .swiper-slide
+              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+
+            .swiper-slide
+              +pictureTag(false, "", "", "jpg", "img-slide-contacts")
+
+
+          +swiper('swiper-container--contacts', 'swiperContactsContent', false, false, false)
+
+      .contacts__wrapper-right
+        p.contacts__title!= "Make An Appointment"
+
+        form.form
+          .form__field.form__field--input
+            input.form__input(type="text" name="" placeholder="Name")
+
+          .form__field.form__field--input
+            input.form__input(type="text" name="" placeholder="Email")
+
+          .form__field.form__field--input
+            input.form__input(type="text" name="" placeholder="Phone")
+
+          .form__field.form__field--input
+            input.form__input(type="text" name="" placeholder="Messages")
+
+          .form__field.form__field--btn
+            button(type="button" class="form__btn")!= "Send"
+
+// CONTACTS :: END

@@ -29,6 +29,7 @@ $(document).ready((ev) => {
     initWebFontLoader();
     initPreventBehavior();
     // lib
+    initSwiper();
     // callback
   };
   initJquery();

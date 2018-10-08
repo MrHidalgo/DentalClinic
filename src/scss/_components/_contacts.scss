@@ -1,0 +1,88 @@
+// CONTACTS :: START
+
+.contacts {
+  overflow: hidden;
+  padding-top: 45px;
+  padding-bottom: 32px;
+  background-color: $c-404c60;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    @include respond(max-medium) {
+      flex-wrap: wrap;
+    }
+
+    &-left {
+      z-index: 1;
+      position: relative;
+      width: calc(100% - 573px);
+      @include respond(max-medium) {
+        width: 100%;
+      }
+    }
+
+    &-right {
+      z-index: 0;
+      position: relative;
+      width: 573px;
+      padding: 129px 73px 147px 115px;
+      background-color: $c-white;
+      @include respond(max-medium) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      @include respond(max-small) {
+        width: 100%;
+        padding: 80px 40px 100px 65px;
+      }
+      @include respond(max-extra-small) {
+        padding-left: 30px;
+        padding-right: 15px;
+      }
+    }
+  }
+
+  &__title {
+    padding-left: 15px;
+    padding-bottom: 47px;
+    color: $c-333;
+    font-size: 30px;
+    @include respond(max-extra-small) {
+      font-size: 25px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    width: 528px;
+    height: 495px;
+    background-color: $c-white;
+    @include respond(max-large) {
+      width: 478px;
+    }
+    @include respond(max-medium) {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 60px;
+    }
+    @include respond(max-extra-small) {
+      width: 100%;
+      height: 400px;
+    }
+
+    &:after {
+      content: "";
+      z-index: -1;
+      position: absolute;
+      bottom: -23px;
+      left: -23px;
+      width: 100%;
+      max-width: 307px;
+      height: 156px;
+      background-color: $c-9acd70;
+    }
+  }
+}
+
+// CONTACTS :: END

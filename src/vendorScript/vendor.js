@@ -4,5 +4,6 @@
 *
 * - bower-webfontloader;
 * - jQuery;
+* - Swiper;
 *
 * */
