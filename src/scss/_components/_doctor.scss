@@ -1,8 +1,12 @@
 // DOCTOR :: START
 
 .doctor {
-  background-color: $c-f8f8f8;
+  padding-top: 78px;
   padding-bottom: 90px;
+  background-image: url('../img/img-bg-doctor@2x.png');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &__title {
     padding-bottom: 29px;
@@ -76,6 +80,12 @@
       text-decoration: underline;
       font-size: 15px;
       font-family: 'Armata', 'Montserrat', sans-serif;
+      @include transition(color);
+
+      &:hover {
+        color: $c-c96330;
+        @include transition(color);
+      }
     }
   }
 }
