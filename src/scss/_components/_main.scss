@@ -52,6 +52,9 @@
       top: 0;
       height: calc(100% - 130px);
       background-color: $c-404c60;
+      @include respond(max-small) {
+        height: 100%;
+      }
     }
 
     &--bottom {
@@ -63,6 +66,9 @@
       height: 160px;
       object-fit: cover;
       object-position: center;
+      @include respond(max-small) {
+        display: none;
+      }
     }
 
     &--ppl-0,
@@ -82,6 +88,9 @@
     position: absolute;
     left: 0;
     bottom: 100px;
+    @include respond(max-small) {
+      display: none;
+    }
   }
 
   .c-grid {
@@ -117,7 +126,12 @@
     @include respond(max-small) {
       color: $c-white;
       font-size: 30px;
-      padding-bottom: 100px;
+      padding-top: 145px;
+      padding-bottom: 75px;
+
+      br {
+        display: none;
+      }
     }
   }
 
@@ -161,6 +175,7 @@
       font-family: "Armata", "Montserrat", sans-serif;
       @include respond(max-small) {
         font-size: 15px;
+        padding-bottom: 50px;
       }
     }
   }
