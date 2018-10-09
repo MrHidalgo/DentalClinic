@@ -19,7 +19,7 @@
     }
 
     .swiper-pagination {
-      bottom: 0;
+      bottom: -5px;
       @include respond(max-small) {
         top: 0;
         bottom: auto;
@@ -29,6 +29,7 @@
         opacity: 1;
         width: 67px;
         height: 7px;
+        margin: 0 2px;
         border-radius: 0;
         background-color: $c-bebebd;
         @include transition(background-color);

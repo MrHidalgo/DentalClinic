@@ -3,8 +3,8 @@
 .testimonials {
   overflow: hidden;
   position: relative;
-  padding-top: 53px;
-  padding-bottom: 245px;
+  padding-top: 32px;
+  padding-bottom: 225px;
   @include respond(max-small) {
     padding-bottom: 175px;
   }
@@ -51,7 +51,7 @@
   }
 
   &__title {
-    padding-bottom: 13px;
+    //padding-bottom: 13px;
   }
 
   &__wrapper {

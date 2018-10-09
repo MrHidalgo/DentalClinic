@@ -24,8 +24,8 @@
 
   &__link {
     display: block;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 14px;
+    margin-right: 14px;
     font-size: 17px;
     @include transition(color);
     @include respond(max-large) {

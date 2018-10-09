@@ -74,7 +74,8 @@
     }
 
     &-top {
-      padding-bottom: 19px;
+      padding-bottom: 5px;
+      padding-right: 12px;
       @include respond(max-large) {
         padding-bottom: 0;
         padding-top: 30px;
@@ -91,6 +92,10 @@
           @include transition(color);
         }
       }
+    }
+
+    &-bottom {
+      padding-right: 5px;
     }
   }
 }
