@@ -51,6 +51,12 @@
     transition-property: transform;
     transition-duration: 0.15s;
     transition-timing-function: ease;
+    @include respond(max-small) {
+      .header.is-active &,
+      .header--fixed & {
+        background-color: $c-333;
+      }
+    }
   }
 
   &::before,

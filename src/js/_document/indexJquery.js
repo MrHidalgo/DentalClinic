@@ -54,6 +54,8 @@ $(document).ready((ev) => {
     // lib
     initSwiper();
     initPopups();
+    initSmoothScroll(".nav__link");
+    initHamburger();
     // callback
     initMoreMainBtn();
     initParallaxAnimation();

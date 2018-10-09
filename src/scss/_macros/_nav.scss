@@ -1,5 +1,44 @@
 // NAV :: START
 
-.nav {}
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    @include respond(max-large) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      a {
+        margin-left: 0;
+      }
+    }
+    &:last-child {
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 17px;
+    @include transition(color);
+    @include respond(max-large) {
+      min-height: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &:hover {
+      color: $c-305571;
+      @include transition(color);
+    }
+  }
+}
 
 // NAV :: END

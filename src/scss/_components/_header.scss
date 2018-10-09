@@ -1,5 +1,108 @@
 // HEADER :: START
 
-.header {}
+.header {
+  z-index: 100;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  @include transition(background-color);
+
+  &.is-active {
+    background-color: $c-white;
+  }
+
+  &--fixed {
+    background-color: $c-white;
+    box-shadow: 0 1px 10px 0 rgba($c-333, 0.15);
+    @include transition(background-color);
+  }
+
+  .c-grid {
+    max-width: 1097px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 90px;
+
+    &-left {
+      width: 380px;
+      @include respond(max-large) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .hamburger {
+        @include respond(extra-large) {
+          display: none;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: flex-end;
+      width: 100%;
+      max-width: calc(100% - 380px);
+      @include respond(max-large) {
+        overflow-y: auto;
+        display: none;
+        position: fixed;
+        top: 90px;
+        left: 0;
+        max-width: 100%;
+        height: calc(100% - 90px);
+        padding: 30px;
+        background-color: rgba($c-white, 0.97);
+
+        &.is-open {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          border-top: 1px solid rgba($c-333, 0.05);
+          animation-fill-mode: both;
+          animation-duration: 0.75s;
+          animation-name: zoomInC;
+        }
+      }
+    }
+
+    &-top {
+      padding-bottom: 19px;
+      @include respond(max-large) {
+        padding-bottom: 0;
+        padding-top: 30px;
+      }
+
+      a {
+        color: $c-c96330;
+        font-size: 24px;
+        font-weight: 600;
+        @include transition(color);
+
+        &:hover {
+          color: $c-38739c;
+          @include transition(color);
+        }
+      }
+    }
+  }
+}
+
+@keyframes zoomInC {
+  from {
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+  }
+  50% {
+    opacity: 1;
+  }
+}
 
 // HEADER :: END

@@ -12,6 +12,10 @@ const initSmoothScroll = (btnName = "[anchor-js]", animateSpeed = 1000) => {
       headerHeight = $(".header").outerHeight() || 0,
       topHeightOffset = $(linkHref).offset().top - headerHeight;
 
+    $("html, body").removeClass("is-hideScroll");
+    $("#header, [hamburger-js]").removeClass("is-active");
+    $("[mobile-block-js]").removeClass("is-open");
+
     $('body, html').animate({
       scrollTop: topHeightOffset
     }, animateSpeed);

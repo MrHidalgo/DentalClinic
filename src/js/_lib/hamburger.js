@@ -7,6 +7,7 @@
 const initHamburger = () => {
 
   const btn = document.querySelector("[hamburger-js]"),
+    headerContainer = document.getElementById("header"),
     hideScrollContainer = document.querySelectorAll("html, body"),
     mobileContainer = document.querySelector("[mobile-block-js]");
 
@@ -14,6 +15,7 @@ const initHamburger = () => {
     const elem = ev.currentTarget;
 
     elem.classList.toggle("is-active");
+    headerContainer.classList.toggle("is-active");
     mobileContainer.classList.toggle("is-open");
 
     hideScrollContainer.forEach((val, idx) => {

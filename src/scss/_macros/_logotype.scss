@@ -1,5 +1,35 @@
 // LOGOTYPE :: START
 
-.logo {}
+.logotype {
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 5px;
+    @include respond(max-extra-small) {
+      height: 36px;
+    }
+  }
+
+  p {
+    line-height: 1.2;
+    font-size: 22px;
+    @include transition(color);
+    @include respond(max-small) {
+      color: $c-white;
+
+      .header.is-active &,
+      .header--fixed & {
+        color: $c-333;
+        @include transition(color);
+      }
+    }
+    @include respond(max-extra-small) {
+      font-size: 14px;
+    }
+  }
+}
 
 // LOGOTYPE :: END
