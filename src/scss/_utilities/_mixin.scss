@@ -194,6 +194,7 @@ $breakpointsMedia: (
 	wide-medium     	: "(min-width: 1440px)",	/// wide-medium
 	max-wide-medium 	: "(max-width: 1599px)",
 	wide-large      	: "(min-width: 1600px)",	/// wide-large
+	max-hd        		: "(max-width: 1919px)",
 	hd        				: "(min-width: 1920px)"
 ) !default;
 

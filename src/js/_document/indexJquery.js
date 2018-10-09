@@ -31,6 +31,18 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   * @initParallaxAnimation
+   */
+  const initParallaxAnimation = () => {
+    const parallaxImg = document.querySelector("#main__bg");
+
+    if(parallaxImg) {
+      new Parallax(parallaxImg);
+    }
+  };
+
+
 
   /**
    * @description Init all method
@@ -44,6 +56,7 @@ $(document).ready((ev) => {
     initPopups();
     // callback
     initMoreMainBtn();
+    initParallaxAnimation();
   };
   initJquery();
 });
