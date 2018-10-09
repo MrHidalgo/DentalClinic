@@ -43,6 +43,22 @@ $(document).ready((ev) => {
   };
 
 
+  /**
+   *
+   */
+  const initDoctorViewBio = () => {
+    $(".doctor__block-link").on('click', (ev) => {
+      const elem = $(ev.currentTarget);
+
+      elem.closest(".doctor__block").find(".doctor__block-info").slideDown('300');
+    });
+    $(".doctor__block-info a").on('click', (ev) => {
+      const elem = $(ev.currentTarget);
+      elem.closest(".doctor__block").find(".doctor__block-info").slideUp('300');
+    });
+  };
+
+
 
   /**
    * @description Init all method
@@ -53,12 +69,12 @@ $(document).ready((ev) => {
     initPreventBehavior();
     // lib
     initSwiper();
-    initPopups();
     initSmoothScroll(".nav__link");
     initHamburger();
     // callback
     initMoreMainBtn();
     initParallaxAnimation();
+    initDoctorViewBio();
   };
   initJquery();
 });

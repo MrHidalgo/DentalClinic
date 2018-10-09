@@ -1,13 +1,6 @@
 // DOCTOR :: START
 
-mixin modalDoctorContent()
-  .modal__header
-  .modal__body
-    h3!= "Some title"
-    p!= "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-  .modal__footer
-
-mixin doctorBlock(classMod, imgClassMod, imgExt, imgName, doctorName, doctorPos, hrefVal)
+mixin doctorBlock(classMod, imgClassMod, imgExt, imgName, doctorName, doctorPos, hrefVal, modalText)
   .doctor__block(class!= "doctor__block-" + classMod)
     .doctor__block-img
       +pictureTag(false, "", imgClassMod, imgExt, imgName)
@@ -17,10 +10,14 @@ mixin doctorBlock(classMod, imgClassMod, imgExt, imgName, doctorName, doctorPos,
     a.doctor__block-link(
       href!= hrefVal
       title="" class=""
-      popup-js
-      data-effect="mfp-zoom-in"
     )!= "View  Bio"
 
+    .doctor__block-info
+      a(
+        href="#"
+        title="" class=""
+      )!= "X"
+      p!= modalText
 
 section#doctor.doctor
   .c-grid
@@ -32,21 +29,22 @@ section#doctor.doctor
         "0",
         "object-fit-containCenter", "png", "img-doctor-0",
         "Dr. Varghese Chacko", "Pedodontics & Preventive Dentistry<br><span>B.D.S, M.D.S</span>",
-        "#modalBio"
+        "#",
+        "Dr Varghese Chacko completed his B.D.S from College of Dental Surgery, Manipal, Manipal Academy of Higher Education in the year 2000. He later completed his M.D.S in the speciality of Pedodontics and Preventive Dentistry in the year 2004 from Government Dental College, Trivandrum , Kerala University. He has over 14 years of experience in the speciality of Pediatric Dentistry and is currently working as Professor in the department of Dentistry at Dr.Somervell Memorial CSI Medical College, Karakonam."
       )
       +doctorBlock(
         "1",
         "object-fit-containCenter", "png", "img-doctor-1",
         "Dr. Suvy Manuel", "Oral & Maxillofacial Surgeon<br><span>BDS, MDS, DNB, MNAMS, MFDS RCS Eng, MOS RCS Ed, FDS RCS Ed</span>",
-        "#modalBio"
+        "#",
+        "Dr Suvy Manuel FDS RCS Ed, is a consultant oral and maxillofacial surgeon based at trivandrum.  His services in this clinic include dental extractions, surgical removal of teeth, surgical removal of impacted third molar (wisdom) teeth and other minor oral surgeries. Dr Manuel will also be available for consultation by prior appointment on diseases affecting the jaws   (pathologies), jaw deformities ( orthognathic surgery) and injuries affecting the oro facial region ( maxillofacial trauma)."
       )
       +doctorBlock(
         "2",
         "object-fit-containCenter", "png", "img-doctor-2",
         "Dr.Deepu Leander", "Orthodontics & Dentofacial Orthopedics<br><span>B.D.S, M.D.S</span>",
-        "#modalBio"
+        "#",
+        "Dr Deepu  is an alumini of GOVERNMENT DENTAL COLLEGE TRIVANDRUM . APart from being a busy consultant he is also currently professor in orthodontics at one of the leading private dental colleges in Kerala and is actively involved in postgraduate teaching. He has numerous publications to his credit."
       )
-
-  +modal('modalBio', 'modalDoctorContent')
 
 // DOCTOR :: END
