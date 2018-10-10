@@ -7,12 +7,12 @@ section#main.main
       alt="" title=""
      )
     #main__bg
-      img.main__bg--ppl-0(
+      img.main__bg--ppl-0.main__bg--ppl--desktop(
         data-depth="0.25"
         src="./img/img-ppl-main-0.png"
         alt="" title=""
        )
-      img.main__bg--ppl-1(
+      img.main__bg--ppl-1.main__bg--ppl--desktop(
         data-depth="0.15"
         src="./img/img-ppl-main-1.png"
         alt="" title=""
@@ -26,6 +26,12 @@ section#main.main
   .c-grid
 
     h1.main__title!= "Providing quality and evidence based <br>treatment for children of all age groups"
+
+    .main__ppl
+      img(
+        srcset="./img/img-main-ppl.png, ./img/img-main-ppl@2x.png 2x"
+        alt="" title=""
+       )
 
     .main__text-wrapper
       p.main__text!= "Located at Golf Links Road, Kowdiar it is one of the few clinics in the city providing treatment exclusively for children. Believing in the philosophy, “Starting Early Makes a difference”, the clinic aims to meet the dental and oral health needs of children right from infancy through childhood and adolescence."

@@ -179,6 +179,29 @@
       }
     }
   }
+
+  &__ppl {
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 30px;
+    @include respond(medium) {
+      display: none;
+    }
+    @include respond(max-extra-small) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 // MAIN :: END
