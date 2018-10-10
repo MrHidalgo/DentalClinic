@@ -128,7 +128,7 @@ const initSwiper = () => {
     freeMode: false,
     effect: 'slide', // "slide", "fade", "cube", "coverflow" or "flip"
     autoplay: {
-      delay: 3500,
+      delay: 5000,
     },
     speed: 550,
     slidesPerView: 1,
@@ -138,4 +138,12 @@ const initSwiper = () => {
       clickable: true,
     },
   });
+
+  mySwiperFactilities.el.addEventListener("mouseenter", function() {
+    mySwiperFactilities.autoplay.stop();
+  }, false);
+
+  mySwiperFactilities.el.addEventListener("mouseleave", function() {
+    mySwiperFactilities.autoplay.start();
+  }, false);
 };
