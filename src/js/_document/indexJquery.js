@@ -24,9 +24,17 @@ $(document).ready((ev) => {
    */
   const initMoreMainBtn = () => {
     $(".main__text-more").on('click', (ev) => {
-      const parentElem = $(ev.currentTarget).closest(".main__text-wrapper");
+      const elem = $(ev.currentTarget),
+        parentElem = elem.closest(".main__text-wrapper");
 
+      elem.toggleClass('is-active');
       parentElem.find(".main__text-hide").slideToggle(450);
+
+      if(elem.hasClass('is-active')) {
+        elem.html('Read less');
+      } else {
+        elem.html('Read more');
+      }
     });
   };
 
